@@ -1,0 +1,6 @@
+@Acredita.API_HostAddress = http://localhost:5098
+
+GET {{Acredita.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
