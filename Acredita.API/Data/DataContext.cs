@@ -14,6 +14,8 @@ namespace Acredita.API.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<Classroom> Classrooms { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<City> Cities { get; set; }
         public DataContext(DbContextOptions<DataContext> options):base(options)
         {
             

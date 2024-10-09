@@ -1,6 +1,7 @@
 ﻿using Acredita.API.Data;
 using Acredita.Shared.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Acredita.API.Controllers
 {
@@ -12,6 +13,11 @@ namespace Acredita.API.Controllers
         public ProjectsController(DataContext dataContext)
         {
             this.dataContext = dataContext;
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAsync()
+        {
+            return Ok(await dataContext.Projects.ToListAsync());
         }
         [HttpPost]
         public async Task<IActionResult> PostAsync(Project project)

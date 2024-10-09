@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 namespace Acredita.API.Controllers
 {
     [ApiController]
-    [Route("/api/majors")]
-    public class MajorsController: ControllerBase
+    [Route("/api/countries")]
+    public class CountriesController:ControllerBase
     {
         private readonly DataContext dataContext;
 
-        public MajorsController(DataContext dataContext)
+        public CountriesController(DataContext dataContext)
         {
             this.dataContext = dataContext;
         }
@@ -32,12 +32,12 @@ namespace Acredita.API.Controllers
             return Ok(country);
         }
         [HttpPost]
-        public async Task<IActionResult> PostAsync(Major major)
+        public async Task<IActionResult> PostAsync(Country country)
         {
             try
             {
                 await dataContext.SaveChangesAsync();
-                return Ok(major);
+                return Ok(country);
             }
             catch (DbUpdateException dbUpdateException)
             {
@@ -56,13 +56,13 @@ namespace Acredita.API.Controllers
             }
         }
         [HttpPut]
-        public async Task<ActionResult> Put(Major major)
+        public async Task<ActionResult> Put(Country country)
         {
-            dataContext.Update(major);
+            dataContext.Update(country);
             try
             {
                 await dataContext.SaveChangesAsync();
-                return Ok(major);
+                return Ok(country);
             }
             catch (DbUpdateException dbUpdateException)
             {
@@ -94,3 +94,4 @@ namespace Acredita.API.Controllers
         }
     }
 }
+
