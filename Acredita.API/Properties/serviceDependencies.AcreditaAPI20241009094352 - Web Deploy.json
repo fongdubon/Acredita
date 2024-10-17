@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/AcreditaAPI/apis/AcreditaAPI",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/AcreditaAPI20241009094352/providers/Microsoft.ServiceLinker/linkers/ConnectionStringscon_63D439AE68",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/acreditaapidb/databases/AcreditaAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:con"
+    }
+  }
+}

@@ -14,6 +14,6 @@ namespace Acredita.Shared.Entities
         [Display(Name = "País")]
         [MaxLength(20, ErrorMessage = "El campo {0} no puede tener mas de {1} caracteres")]
         public string Name { get; set; } = null!;
-        public ICollection<City>? Cities { get; set; }
+        //public ICollection<City>? Cities { get; set; }
     }
 }

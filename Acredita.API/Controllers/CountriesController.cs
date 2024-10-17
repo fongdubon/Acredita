@@ -18,7 +18,7 @@ namespace Acredita.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            return Ok(await dataContext.Majors.ToListAsync());
+            return Ok(await dataContext.Countries.ToListAsync());
         }
         [HttpGet("{id:int}")]
         public async Task<ActionResult> Get(int id)

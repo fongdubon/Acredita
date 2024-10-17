@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Acredita.API.Controllers
 {
     [ApiController]
-    [Route("/api/subject")]
+    [Route("/api/subjects")]
     public class SubjectsController : ControllerBase
 
     {

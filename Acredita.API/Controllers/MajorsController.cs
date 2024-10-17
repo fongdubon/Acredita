@@ -36,6 +36,7 @@ namespace Acredita.API.Controllers
         {
             try
             {
+                dataContext.Majors.Add(major);
                 await dataContext.SaveChangesAsync();
                 return Ok(major);
             }
